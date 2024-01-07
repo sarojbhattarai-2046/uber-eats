@@ -1,0 +1,19 @@
+{
+  "name": "uber-eats-web",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Saroj <sir.rosebro@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/uber-eats-web.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/uber-eats-web.test.js"
+  }
+}
