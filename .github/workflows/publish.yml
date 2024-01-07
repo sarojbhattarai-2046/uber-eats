@@ -1,0 +1,22 @@
+# https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#understanding-the-workflow-file
+name: CI workflow
+on:
+    pull_request:
+        types: [ opened, synchronize ]
+
+jobs:
+    # [ checks, builds ]
+    # Checks are a type of GitHub Actions job that allows you to run various tasks, tests, and validations on your code.
+    # Builds, in the context of GitHub Actions, typically refer to the process of compiling and assembling your code into a deployable artifact.
+    checks:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: "Checkout"
+              uses: actions/checkout@v4
+              with: 
+                # fetch-depth: 0 to fetch all history for all branches and tags. Refer here to learn which commit $GITHUB_SHA points 
+                # to for different events.
+                fetch-depth: 0
+
+            
